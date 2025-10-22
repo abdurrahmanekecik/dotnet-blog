@@ -4,18 +4,18 @@ namespace Entitites
 {
     public class Post
     {
-        public int Id { get; set; }
+        public Guid Uuid { get; set; }
 
-        public string Title { get; set; }
+        public required string Title { get; set; }
 
-        public string Slug { get; set; }
+        public required string Slug { get; set; }
 
         [Column(TypeName = "nvarchar(max)")]
-        public string Content { get; set; }
+        public required string Content { get; set; }
 
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
-        public int AuthorId { get; set; }
+        public Guid AuthorId { get; set; }
 
         public User User { get; set; }
 

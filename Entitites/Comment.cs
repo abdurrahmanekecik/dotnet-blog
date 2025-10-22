@@ -2,11 +2,11 @@
 {
     public class Comment
     {
-        public int Id { get; set; }
+        public Guid Uuid { get; set; }
 
-        public string Content { get; set; }
+        public required string Content { get; set; }
 
-        public int PostId { get; set; }
+        public Guid PostId { get; set; }
 
         public Common.StatusEnum.Status Status { get; set; }
         public DateTime CreatedAt { get; set; }
