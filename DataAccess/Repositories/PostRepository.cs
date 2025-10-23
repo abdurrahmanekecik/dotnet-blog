@@ -53,6 +53,7 @@ namespace DataAccess.Repositories
 
             return _context.Posts.Count(predicate);
         }
+
         public IEnumerable<Post> List(Expression<Func<Post, bool>> predicate = null)
         {
             if (predicate == null)
