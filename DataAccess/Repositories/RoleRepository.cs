@@ -51,14 +51,14 @@ namespace DataAccess.Repositories
             if (predicate == null)
                 return _context.Roles.Count();
 
-            return _context.R.Count(predicate);
+            return _context.Roles.Count(predicate);
         }
 
         public IEnumerable<Role> List(Expression<Func<Role, bool>> predicate = null)
         {
             if (predicate == null)
                 return _context.Roles.ToList();
-            return _context.Posts.Where(predicate).ToList();
+            return _context.Roles.Where(predicate).ToList();
         }
     }
 }

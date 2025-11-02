@@ -58,7 +58,7 @@ namespace DataAccess.Repositories
         {
             if (predicate == null)
                 return _context.Comments.ToList();
-            return _context.Posts.Where(predicate).ToList();
+            return _context.Comments.Where(predicate).ToList();
         }
     }
 }
